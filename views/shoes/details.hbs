@@ -1,0 +1,25 @@
+<div class="offer-details">
+    <h1>{{shoe.brand}} {{shoe.name}}</h1>
+    <div class="info">
+        <img src="{{shoe.imageUrl}}" alt="">
+        <div class="description">{{shoe.description}}
+            <br>
+            <br>
+            <p> <strong>Buyers:</strong> {{buyersLength}}</p>
+            <br>
+            <p class="price">${{shoe.price}}</p>
+        </div>
+    </div>
+    <div class="actions">
+        {{#if isCreator}}
+        <a href="/edit/{{shoe._id}}">Edit</a>
+        <a href="/delete/{{shoe._id}}">Delete</a>
+        {{else}}
+        {{#if buyer}}
+        <span>You bought it</span>
+        {{else}}
+        <a href="/buyShoe/{{shoe._id}}">Buy</a>
+        {{/if}}
+        {{/if}}
+    </div>
+</div>

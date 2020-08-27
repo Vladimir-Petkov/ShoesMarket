@@ -1,0 +1,33 @@
+{{#if isLoggedIn}}
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/create">Create new offer</a>
+            </li>
+            <li>
+                <a href="/">
+                    <img src="/sneakers.png" alt="">
+                </a>
+            </li>
+            <li>Welcome,<a href="/profile/{{_id}}">{{ email }}</a> |
+                <a href="/logout">Logout</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+{{else}}
+<header>
+    <nav>
+        <ul>
+            <li class="site-logo">Shoe</li>
+            <li>
+                <a href="/">
+                    <img src="sneakers.png" alt="">
+                </a>
+            </li>
+            <li class="site-logo">Shelf</li>
+        </ul>
+    </nav>
+</header>
+{{/if}}
